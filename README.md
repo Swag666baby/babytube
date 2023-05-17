@@ -8,10 +8,20 @@ npm install babytube
 
 # examples
 to get data from a video like description, title, duration, thumbnail and stuff like that use the **getData** method.
+
+**async:**
 ```
 const babytube = require("babytube");
 const response = babytube.getData("https://www.youtube.com/watch?v=h3EJICKwITw");
 console.log(response)
+```
+**not async:** 
+```
+const babytube = require("babytube")
+
+babytube.getData('https://www.youtube.com/watch?v=h3EJICKwITw').then((data) => {
+    console.log(data); 
+})
 ```
 # 
 to download some music use the **musicDownload** method. 
