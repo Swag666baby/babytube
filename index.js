@@ -5,21 +5,21 @@ function errorMessage(pythonProcess){
 }
 const { spawn } = require('child_process');
 function getData(link){
-    const pythonProcess = spawn('python', ['./node_modules/babytube/getData.py', link]);
+    const pythonProcess = spawn('python', ['./node_modules/babytube/src/getData.py', link]);
     pythonProcess.stdout.on('data', (data) => {
         console.log(JSON.parse(data, null, 2))
     });
     errorMessage(pythonProcess)
 }
 function videoDownload(link){
-    const pythonProcess = spawn('python', ['./node_modules/babytube/videoDownload.py', link]);
+    const pythonProcess = spawn('python', ['./node_modules/babytube/src/videoDownload.py', link]);
     pythonProcess.stdout.on('data', (data) => {
         console.log("download finished!")
     });
     errorMessage(pythonProcess)
 }
 function musicDownload(link){
-    const pythonProcess = spawn('python', ['./node_modules/babytube/musicDownload.py', link]);
+    const pythonProcess = spawn('python', ['./node_modules/babytube/src/musicDownload.py', link]);
     pythonProcess.stdout.on('data', (data) => {
         console.log("download finished!")
     });
