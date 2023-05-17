@@ -12,7 +12,7 @@ to get data from a video like description, title, duration, thumbnail and stuff 
 **async:**
 ```
 const babytube = require("babytube");
-const response = babytube.getData("https://www.youtube.com/watch?v=h3EJICKwITw");
+const response = await babytube.getData("https://www.youtube.com/watch?v=h3EJICKwITw");
 console.log(response)
 ```
 **not async:** 
