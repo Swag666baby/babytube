@@ -7,7 +7,6 @@ nodejs and python must be installed on your machine
 # installation 
 ```
 npm install babytube
-pip install pytube
 ```
 
 # examples
