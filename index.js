@@ -3,7 +3,6 @@ function errorMessage(pythonProcess) {
         console.error(data);
     });
 }
-
 const { spawn } = require('child_process');
 
 function getData(link) {
@@ -28,20 +27,18 @@ function getData(link) {
 function videoDownload(link, file) {
     const pythonProcess = spawn('python', ['./node_modules/babytube/src/videoDownload.py', link, file]);
 
-    pythonProcess.stdout.on('data', (data) => {
+    pythonProcess.stdout.on('end', (data) => {
         console.log("download finished!");
     });
-
     errorMessage(pythonProcess);
 }
 
 function musicDownload(link, file) {
     const pythonProcess = spawn('python', ['./node_modules/babytube/src/musicDownload.py', link, file]);
 
-    pythonProcess.stdout.on('data', (data) => {
+    pythonProcess.stdout.on('end', (data) => {
         console.log("download finished!");
     });
-
     errorMessage(pythonProcess);
 }
 
