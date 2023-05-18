@@ -25,8 +25,8 @@ function getData(link) {
     });
 }
 
-function videoDownload(link) {
-    const pythonProcess = spawn('python', ['./node_modules/babytube/src/videoDownload.py', link]);
+function videoDownload(link, file) {
+    const pythonProcess = spawn('python', ['./node_modules/babytube/src/videoDownload.py', link, file]);
 
     pythonProcess.stdout.on('data', (data) => {
         console.log("download finished!");
@@ -35,8 +35,8 @@ function videoDownload(link) {
     errorMessage(pythonProcess);
 }
 
-function musicDownload(link) {
-    const pythonProcess = spawn('python', ['./node_modules/babytube/src/musicDownload.py', link]);
+function musicDownload(link, file) {
+    const pythonProcess = spawn('python', ['./node_modules/babytube/src/musicDownload.py', link, file]);
 
     pythonProcess.stdout.on('data', (data) => {
         console.log("download finished!");
