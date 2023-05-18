@@ -4,6 +4,8 @@ babytube is a pytube based library to get data from a given youtube video, downl
 # installation 
 ```
 npm install babytube
+apt-get install python
+pip install pytube
 ```
 
 # examples
