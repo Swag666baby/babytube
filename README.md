@@ -1,10 +1,12 @@
 # babytube
 babytube is a pytube based library to get data from a given youtube video, download it or just the audio. 
 
+necessary: 
+nodejs and python must be installed on your machine 
+
 # installation 
 ```
 npm install babytube
-apt-get install python
 pip install pytube
 ```
 
