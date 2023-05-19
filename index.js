@@ -7,7 +7,7 @@ const { spawn } = require('child_process');
 
 function getData(link) {
     return new Promise((resolve, reject) => {
-        const pythonProcess = spawn('python', ['./node_modules/babytube/src/getData.py', link]);
+        const pythonProcess = spawn('python3', ['./node_modules/babytube/src/getData.py', link]);
         let jsonData = '';
         pythonProcess.stdout.on('data', (data) => {
             jsonData += data.toString();
@@ -25,7 +25,7 @@ function getData(link) {
 }
 
 function videoDownload(link, file) {
-    const pythonProcess = spawn('python', ['./node_modules/babytube/src/videoDownload.py', link, file]);
+    const pythonProcess = spawn('python3', ['./node_modules/babytube/src/videoDownload.py', link, file]);
 
     pythonProcess.stdout.on('end', (data) => {
         console.log("download finished!");
@@ -34,7 +34,7 @@ function videoDownload(link, file) {
 }
 
 function musicDownload(link, file) {
-    const pythonProcess = spawn('python', ['./node_modules/babytube/src/musicDownload.py', link, file]);
+    const pythonProcess = spawn('python3', ['./node_modules/babytube/src/musicDownload.py', link, file]);
 
     pythonProcess.stdout.on('end', (data) => {
         console.log("download finished!");
