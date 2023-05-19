@@ -32,3 +32,4 @@ const babytube = require("babytube")
 
 babytube.videoDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp4')
 ```
+note: cloning via git you will need to install the pytube library (from python), so I recommend installing babytube via npm. 
