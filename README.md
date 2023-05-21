@@ -27,8 +27,6 @@ const babytube = require("babytube")
 babytube.musicDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3').on('finish', () => {
     console.log("completed download.")
 })
-
-})
 ```
 or to download the video 
 ```
