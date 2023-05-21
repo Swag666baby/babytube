@@ -1,8 +1,8 @@
 # babytube
 babytube is a pytube based library to get data from a given youtube video, download it or just the audio. 
 
-necessary: 
-nodejs and python must be installed on your machine 
+# necessary 
+you need python3 and (obviously) nodejs installed on your machine. 
 
 # installation 
 ```
@@ -24,12 +24,17 @@ to download some music use the **musicDownload** method.
 ```
 const babytube = require("babytube")
 
-babytube.musicDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3')
+babytube.musicDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3').on('finish', () => {
+    console.log("completed download.")
+})
+
+})
 ```
 or to download the video 
 ```
 const babytube = require("babytube")
 
-babytube.videoDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp4')
+babytube.videoDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3').on('finish', () => {
+    console.log("completed download.")
+})
 ```
-note: cloning via git you will need to install the pytube library (from python), so I recommend installing babytube via npm. 
