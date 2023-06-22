@@ -13,7 +13,7 @@ npm install babytube
 # examples
 to get data from a video like description, title, duration, thumbnail and stuff like that use the **getData** method.
 
-```
+```javascript 
 const babytube = require("babytube")
 
 babytube.getData('https://www.youtube.com/watch?v=VIDEO_ID').then((data) => {
@@ -22,7 +22,7 @@ babytube.getData('https://www.youtube.com/watch?v=VIDEO_ID').then((data) => {
 ```
 # 
 to download some music use the **musicDownload** method. 
-```
+```javascript 
 const babytube = require("babytube")
 
 babytube.musicDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3').on('finish', () => {
@@ -30,7 +30,7 @@ babytube.musicDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3
 })
 ```
 or to download the video 
-```
+```javascript 
 const babytube = require("babytube")
 
 babytube.videoDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3').on('finish', () => {
