@@ -33,7 +33,7 @@ or to download the video
 ```javascript 
 const babytube = require("babytube")
 
-babytube.videoDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp3').on('finish', () => {
+babytube.videoDownload('https://www.youtube.com/watch?v=VIDEO_ID', 'FILENAME.mp4').on('finish', () => {
     console.log("completed download.")
 })
 ```
