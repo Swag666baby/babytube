@@ -1,4 +1,5 @@
 # babytube
+![Monthly downloads](https://img.shields.io/npm/dm/babytube?style=flat)
 
 babytube is a pytube based library to get data from a given youtube video, download it or just the audio. 
 
