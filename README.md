@@ -1,5 +1,6 @@
 # babytube
-![Monthly downloads](https://img.shields.io/npm/dm/babytube?style=flat)
+[![NPM Version](https://img.shields.io/npm/v/babytube.svg?maxAge=10)](https://www.npmjs.com/package/babytube)
+[![NPM Downloads](https://img.shields.io/npm/dt/babytube.svg?maxAge=10)](https://www.npmjs.com/package/babytube)
 
 babytube is a pytube based library to get data from a given youtube video, download it or just the audio. 
 
